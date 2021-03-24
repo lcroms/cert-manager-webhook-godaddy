@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: inspectorio/cert-manager-webhook-godaddy
+  repository: lcroms/cert-manager-webhook-godaddy
   tag: v0.1.1
   pullPolicy: IfNotPresent
 
