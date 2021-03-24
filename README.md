@@ -12,7 +12,7 @@ $ helm install --name godaddy-webhook --namespace cert-manager ./deploy/godaddy-
 ### ClusterIssuer
 
 ```yaml
-apiVersion: certmanager.k8s.io/v1alpha1
+apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
 metadata:
   name: letsencrypt-prod
@@ -40,7 +40,7 @@ spec:
 Certificate
 
 ```yaml
-apiVersion: certmanager.k8s.io/v1alpha1
+apiVersion: cert-manager.io/v1
 kind: Certificate
 metadata:
   name: wildcard-example-com
@@ -63,7 +63,7 @@ metadata:
   name: example-ingress
   namespace: default
   annotations:
-    certmanager.k8s.io/cluster-issuer: "letsencrypt-prod"
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   tls:
   - hosts:
